@@ -1,0 +1,15 @@
+---
+# Mount operations, check or create mountpoint, mount the remote share
+
+    - name: Ensure Gluster brick and mount directories exist.
+          file: "path={{ item }} state=directory mode=0775"
+          with_items:
+            - "{{ gluster_share_dir }}"
+
+    - name: Mount glusterfs share
+          mount:
+            name: "{{ gluster_share_dir }}"
+            src: "{{ gluster_server_name }}:/{{ gluster_volume_name }}"
+            fstype: glusterfs
+            opts: "defaults,_netdev"
+            state: mounted
