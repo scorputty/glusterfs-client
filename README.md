@@ -12,9 +12,12 @@ A running GlusterFS environment to connect with...
 
     defaults/main.yml
     gluster_package_version: '37'
-    gluster_share_dir: "/glusterfs/share"
     gluster_volume_name: "tri-repvol01"
     gluster_server_name: "ansiblehost22"
+    gluster_share_dir: "/glusterfs/share"
+    gluster_share_user: "vagrant"
+    gluster_share_group: "root"
+    gluster_share_perm: "750"
 
 
 Dependencies
