@@ -2,9 +2,9 @@
 # Mount operations, check or create mountpoint, mount the remote share
 
     - name: Ensure Gluster mount directories exist.
-      file: "path={{ item }} state=directory mode=0775"
+      file: path={{ item }} state=directory mode=0775
       with_items:
-         - {{ gluster_share_dir }}
+        - {{ gluster_share_dir }}
 
     - name: Mount glusterfs share
       mount:
