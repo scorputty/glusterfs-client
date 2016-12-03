@@ -1,5 +1,5 @@
 ---
-# Use this file in Tower to kick off the installation of GlusterFD Client
+# Use this file in Tower to kick off the installation of GlusterFS Client
 
 - hosts: glusterfs_client_group
   strategy: free
